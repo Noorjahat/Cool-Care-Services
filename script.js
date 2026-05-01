@@ -23,3 +23,13 @@ return;
 let msg=`Name: ${name}%0APhone: ${phone}%0AAddress: ${address}`;
 window.open(`https://wa.me/918982767251?text=${msg}`);
 }
+
+const slider = document.querySelector(".slider");
+
+slider.addEventListener("mouseenter", () => {
+  slider.style.animationPlayState = "paused";
+});
+
+slider.addEventListener("mouseleave", () => {
+  slider.style.animationPlayState = "running";
+});
