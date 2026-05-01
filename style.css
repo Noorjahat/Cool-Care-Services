@@ -108,6 +108,15 @@ display:flex;
 justify-content:space-between;
 }
 
+.price h3{
+margin-bottom:10px;
+}
+
+.price div{
+padding:6px 0;
+border-bottom:1px solid #eee;
+}
+
 .form{
 margin-top:10px;
 margin-bottom:80px;
