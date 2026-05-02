@@ -1,3 +1,10 @@
+// Password protection
+let pass = prompt("Enter Password");
+
+if(pass !== "Afreen"){
+  document.body.innerHTML = "<h2>Access Denied</h2>";
+}
+
 // Auto Bill Number
 document.getElementById("billNo").innerText =
   "INV" + Math.floor(1000 + Math.random()*9000);
