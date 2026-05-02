@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cool Care Billing</title>
+
+  <!-- CSS file link -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Logo -->
+  <div class="logo">
+    <img src="logo.png">
+  </div>
+
+  <h2>Cool Care Services</h2>
+
+  <!-- Bill Info -->
+  <div class="bill-header">
+    <div>Bill No: <span id="billNo"></span></div>
+    <div>Date: <span id="billDate"></span></div>
+  </div>
+
+  <!-- Customer Inputs -->
+  <label>Name</label>
+  <input type="text" id="name">
+
+  <label>Mobile</label>
+  <input type="text" id="mobile">
+
+  <!-- Services -->
+  <h3>Services</h3>
+
+  <div class="service">
+    <label><input type="checkbox" value="500" data-name="AC Repair"> AC Repair</label>
+    <span>₹500</span>
+  </div>
+
+  <div class="service">
+    <label><input type="checkbox" value="400" data-name="Fridge Repair"> Fridge Repair</label>
+    <span>₹400</span>
+  </div>
+
+  <div class="service">
+    <label><input type="checkbox" value="350" data-name="Washing Machine"> Washing Machine</label>
+    <span>₹350</span>
+  </div>
+
+  <div class="service">
+    <label><input type="checkbox" value="300" data-name="Installation"> Installation</label>
+    <span>₹300</span>
+  </div>
+
+  <div class="service">
+    <label><input type="checkbox" value="250" data-name="Gas Refill"> Gas Refill</label>
+    <span>₹250</span>
+  </div>
+
+  <!-- Other Charges -->
+  <h3>Other Charges</h3>
+  <input type="number" id="other" placeholder="Enter amount">
+  <textarea id="desc" placeholder="Description"></textarea>
+
+  <!-- Total -->
+  <div class="total">
+    Total: ₹<span id="total">0</span>
+  </div>
+
+  <!-- Button -->
+  <button onclick="printBill()">Print Bill</button>
+  
+  <div id="invoice" style="display:none; padding:20px;">
+
+  <div style="text-align:center;">
+    <img src="logo.png" width="100">
+    <h2 style="color:#0a58ca;">Cool Care Services</h2>
+  </div>
+
+  <p><b>Name:</b> <span id="pName"></span></p>
+  <p><b>Mobile:</b> <span id="pMobile"></span></p>
+
+  <h3>Services</h3>
+  <div id="pServices"></div>
+
+  <h3>Total: ₹<span id="pTotal"></span></h3>
+
+  <br>
+  <p style="text-align:center;">Thank you for choosing Cool Care Services</p>
+
+</div>
+
+</div>
+
+<!-- JS file link -->
+<script src="script.js"></script>
+
+</body>
+</html>

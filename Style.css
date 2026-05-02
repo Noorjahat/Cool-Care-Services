@@ -1,0 +1,85 @@
+/* Body */
+body {
+  font-family: Arial;
+  background: #eef4f9;
+}
+
+/* Main container */
+.container {
+  max-width: 650px;
+  background: white;
+  margin: auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Logo */
+.logo {
+  text-align: center;
+}
+.logo img {
+  width: 120px;
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  color: #0a58ca;
+}
+
+/* Inputs */
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Services row */
+.service {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+/* Total */
+.total {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: right;
+  color: #0a58ca;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #0a58ca;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media print {
+
+  .container > * {
+    display: none;
+  }
+
+  #invoice {
+    display: block !important;
+    text-align: left;
+    margin: 20px;
+  }
+
+}
+/* Header */
+.bill-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
