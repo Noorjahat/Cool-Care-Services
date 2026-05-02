@@ -237,5 +237,19 @@ padding:15px;
   }
 }
 
+.billing-btn {
+  background: #0a58ca;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.billing-btn:hover {
+  background: #084298;
+}
+
 .callbar{flex:1;background:#0b5ed7;color:white;padding:15px;}
 .whatsappbar{flex:1;background:#25D366;color:white;padding:15px;}
