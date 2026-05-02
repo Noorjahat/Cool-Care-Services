@@ -37,12 +37,6 @@ input, textarea {
   border-radius: 5px;
 }
 
-/* Services row */
-.service {
-  display: flex;
-  justify-content: space-between;
-  margin: 6px 0;
-}
 
 /* Total */
 .total {
