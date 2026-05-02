@@ -1,81 +1,57 @@
-// Password protection
+
+// 🔐 Password protection
 let pass = prompt("Enter Password");
 
 if(pass !== "Afreen"){
   document.body.innerHTML = "<h2>Access Denied</h2>";
 }
 
-// Auto Bill Number
+// 🧾 Auto Bill Number
 document.getElementById("billNo").innerText =
   "INV" + Math.floor(1000 + Math.random()*9000);
 
-// Auto Date
+// 📅 Auto Date
 document.getElementById("billDate").innerText =
   new Date().toLocaleDateString();
 
-// Calculate total when checkbox changes
-document.querySelectorAll("input[type=checkbox]").forEach(cb => {
-  cb.addEventListener("change", calc);
+
+// 💰 Auto total (manual amount)
+document.getElementById("amount").addEventListener("input", () => {
+  document.getElementById("total").innerText =
+    document.getElementById("amount").value || 0;
 });
 
-document.getElementById("other").addEventListener("input", calc);
 
-// Function to calculate total
-function calc(){
-  let total = 0;
-
-  document.querySelectorAll("input[type=checkbox]:checked")
-    .forEach(cb => total += parseInt(cb.value));
-
-  let other = document.getElementById("other").value;
-  if(other) total += parseInt(other);
-
-  document.getElementById("total").innerText = total;
-}
-
-// Print function (SAFE METHOD - NO BLANK ISSUE)
-// Print Bill Function (FINAL)
+// 🖨️ Print Bill Function (Manual Billing)
 function printBill(){
 
-  // Step 1: input lena
+  // Step 1: inputs lena
   let name = document.getElementById("name").value;
   let mobile = document.getElementById("mobile").value;
+  let work = document.getElementById("work").value;
+  let amount = document.getElementById("amount").value;
 
   // Step 2: validation
-  if(!name || !mobile){
-    alert("Fill details first");
+  if(!name || !mobile || !amount){
+    alert("Fill all details");
     return;
   }
 
-  // Step 3: data invoice me fill karna
+  // Step 3: invoice fill karna
   document.getElementById("pName").innerText = name;
   document.getElementById("pMobile").innerText = mobile;
 
-  let servicesHTML = "";
+  document.getElementById("pServices").innerHTML =
+    `<p>${work || "Service"} - ₹${amount}</p>`;
 
-  document.querySelectorAll("input[type=checkbox]:checked")
-    .forEach(cb => {
-      servicesHTML += `<p>${cb.dataset.name} - ₹${cb.value}</p>`;
-    });
+  document.getElementById("pTotal").innerText = amount;
 
-  let other = document.getElementById("other").value;
-  let desc = document.getElementById("desc").value;
-
-  if(other){
-    servicesHTML += `<p>${desc || "Other"} - ₹${other}</p>`;
-  }
-
-  document.getElementById("pServices").innerHTML = servicesHTML;
-
-  document.getElementById("pTotal").innerText =
-    document.getElementById("total").innerText;
-
-  // Step 4: invoice show karna
+  // Step 4: invoice show
   document.getElementById("invoice").style.display = "block";
 
   // Step 5: print
   window.print();
 
-  // Step 6: wapas hide
+  // Step 6: hide again
   document.getElementById("invoice").style.display = "none";
 }
