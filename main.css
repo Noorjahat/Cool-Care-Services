@@ -36,6 +36,12 @@ font-size:13px;
 text-align:center;
 }
 
+.why-item{
+background:linear-gradient(135deg,#0b5ed7,#198754);
+color:white;
+font-weight:500;
+}
+
 .buttons button{
 padding:10px;
 border:none;
