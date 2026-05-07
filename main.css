@@ -43,7 +43,12 @@ color:white;
 .container{padding:15px;}
 
 .hero{
-background:white;
+min-height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.5),(rgba(0,0,0,.5));
 padding:15px;
 border-radius:10px;
 margin-bottom:10px;
@@ -213,7 +218,8 @@ display:flex;
 }
 
 .container{
-max-width:500px;
+width:90%;
+max-width:1400px;
 margin:auto;
 padding:15px;
 }
